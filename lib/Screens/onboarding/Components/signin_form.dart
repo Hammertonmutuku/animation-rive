@@ -1,3 +1,5 @@
+import 'package:animation1/Screens/Entry/entry_point.dart';
+import 'package:animation1/rive_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -44,6 +46,9 @@ class _SignInFormState extends State<SignInForm> {
                             });
                           });
                           confetti.fire();
+                          Future.delayed(const Duration(seconds: 1), () {
+                         Navigator.push(context, MaterialPageRoute(builder: (context) => const EntryPoint()));
+                          });
                         } else {
                           error.fire();
                           Future.delayed(const Duration(seconds: 2), () {
@@ -138,7 +143,7 @@ class _SignInFormState extends State<SignInForm> {
                   "assets/RiveAssets/check.riv",
                   onInit: (artboard) {
                     StateMachineController controller =
-                        getRiveController(artboard);
+                        RiveUtils.getRiveController(artboard);
                     success = controller.findSMI("Check") as SMITrigger;
                     error = controller.findSMI("Error") as SMITrigger;
                     reset = controller.findSMI("Reset") as SMITrigger;
@@ -154,7 +159,7 @@ class _SignInFormState extends State<SignInForm> {
                   "assets/RiveAssets/confetti.riv",
                   onInit: (artboard) {
                     StateMachineController controller =
-                        getRiveController(artboard);
+                        RiveUtils.getRiveController(artboard);
                     confetti =
                         controller.findSMI("Trigger explosion") as SMITrigger;
                   },

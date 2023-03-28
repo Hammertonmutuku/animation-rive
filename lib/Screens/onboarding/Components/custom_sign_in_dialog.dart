@@ -1,5 +1,5 @@
 
-import 'package:animation1/Components/signin_form.dart';
+import 'package:animation1/Screens/onboarding/Components/signin_form.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

@@ -1,7 +1,7 @@
 import 'dart:ui';
-import 'package:animation1/Components/animation_btn.dart';
-import 'package:animation1/Components/custom_sign_in_dialog.dart';
-import 'package:animation1/Components/signin_form.dart';
+import 'package:animation1/Screens/onboarding/Components/animation_btn.dart';
+import 'package:animation1/Screens/onboarding/Components/custom_sign_in_dialog.dart';
+import 'package:animation1/Screens/onboarding/Components/signin_form.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
