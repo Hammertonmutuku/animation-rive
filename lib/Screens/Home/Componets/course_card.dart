@@ -20,7 +20,7 @@ class CoursesCard extends StatelessWidget {
       height: 280,
       width: 260,
       decoration: BoxDecoration(
-        color: course.bgColor,
+        color: course.color,
         borderRadius: const BorderRadius.all(
           Radius.circular(30),
         ),
@@ -67,7 +67,7 @@ class CoursesCard extends StatelessWidget {
               )
             ],
           )),
-          SvgPicture.asset(course.iconsSrc)
+          SvgPicture.asset(course.iconSrc)
         ],
       ),
     );
